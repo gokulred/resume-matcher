@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+streamlit
+requests
+python-dotenv
+ollama
+chromadb
+llama-parse
+nest_asyncio
