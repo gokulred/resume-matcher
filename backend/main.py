@@ -6,12 +6,12 @@ from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from parser import parse_resume 
 from ai_logic import analyze_match
 from vector_db import VectorDB
-
+from schemas import MatchResponse
 app = FastAPI(title="AI Resume Matcher")
 
 db = VectorDB()
 
-@app.post("/match-pdf") 
+@app.post("/match-pdf",response_model=MatchResponse) 
 async def match_resume(
     file: UploadFile = File(...),
     job_description: str = Form(...)
@@ -23,20 +23,19 @@ async def match_resume(
             shutil.copyfileobj(file.file, buffer)
        
         resume_text = parse_resume(temp_filename)
-
-        resume_id = str(uuid.uuid4())
         if not resume_text:
              raise HTTPException(status_code=400, detail="Failed to extract text from PDF.")
-             
+
+        resume_id = str(uuid.uuid4())  
         db.add_resume(resume_text, resume_id)
         relevant_context = db.query_resume(job_description, n_results=5)
         analysis_result = analyze_match(relevant_context, job_description)
 
-        return {
-            "status": "success",
-            "parsed_text_preview": relevant_context,
-            "analysis": analysis_result
-        }
+        return MatchResponse(
+            status="sucess",
+            parsed_text_preview = relevant_context[:500] + "...",
+            analysis = analysis_result
+        )
     
     except Exception as e:
         print(f"Error: {e}") 

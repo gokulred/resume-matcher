@@ -8,3 +8,4 @@ ollama
 chromadb
 llama-parse
 nest_asyncio
+pydantic
