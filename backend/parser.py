@@ -22,7 +22,8 @@ def parse_resume(file_path: str)->str:
         full_text = "\n".join([doc.text for doc in documents])
         return full_text
     except Exception as e:
-        return f"Error parsing the pdf: {str(e)}"
+      print (f"Error parsing the pdf: {str(e)}") 
+      return None
     
 
      

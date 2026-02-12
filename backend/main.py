@@ -12,11 +12,14 @@ app = FastAPI(title="AI Resume Matcher")
 db = VectorDB()
 
 @app.post("/match-pdf",response_model=MatchResponse) 
-async def match_resume(
+
+def match_resume(
     file: UploadFile = File(...),
     job_description: str = Form(...)
 ):
+ 
     temp_filename = f"temp_{file.filename}"
+    resume_id = None
 
     try:
         with open(temp_filename, "wb") as buffer:
@@ -47,6 +50,9 @@ async def match_resume(
     finally:
         if os.path.exists(temp_filename):
             os.remove(temp_filename)
+        
+        if resume_id:
+            db.delete_resume(resume_id)
 
 @app.get("/")
 def check():

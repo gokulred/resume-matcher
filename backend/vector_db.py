@@ -54,5 +54,8 @@ class VectorDB:
         if not results['documents'] or not results ['documents'][0]:
             return ""
         
+        def delete_resume(self, resume_id:str):
+            self.collection.delete(where={"resume_id": resume_id})
+    
         context = "\n".join(results['documents'][0])
         return context
