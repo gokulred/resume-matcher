@@ -23,17 +23,20 @@ async def match_resume(
             shutil.copyfileobj(file.file, buffer)
        
         resume_text = parse_resume(temp_filename)
+
         if not resume_text:
              raise HTTPException(status_code=400, detail="Failed to extract text from PDF.")
 
         resume_id = str(uuid.uuid4())  
         db.add_resume(resume_text, resume_id)
-        relevant_context = db.query_resume(job_description, n_results=5)
+        relevant_context = db.query_resume(job_description,resume_id, n_results=5)
+
+        if not relevant_context:
+            relevant_context = resume_text[:2000]
         analysis_result = analyze_match(relevant_context, job_description)
 
         return MatchResponse(
-            status="sucess",
-            parsed_text_preview = relevant_context[:500] + "...",
+            parsed_text_preview = relevant_context,
             analysis = analysis_result
         )
     

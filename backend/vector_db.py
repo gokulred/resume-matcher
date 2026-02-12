@@ -1,6 +1,7 @@
 import chromadb
 import ollama
 import uuid
+from typing import List
 
 class VectorDB:
     def __init__(self, collection_name="resumes"):
@@ -40,17 +41,18 @@ class VectorDB:
         )
         print(f"Stored {len(chunks)} chunks for Resume {resume_id}")
 
-    def query_resume(self, query_text, n_results=3):
-        """
-        Searches the DB for the most relevant chunks to the query.
-        """
+    def query_resume(self, query_text:str, resume_id: str, n_results=3):
+      
         query_vector = self.get_embedding(query_text)
         
         results = self.collection.query(
             query_embeddings=[query_vector],
-            n_results=n_results
+            n_results=n_results,
+            where={"resume_id": resume_id}
         )
         
+        if not results['documents'] or not results ['documents'][0]:
+            return ""
         
         context = "\n".join(results['documents'][0])
         return context
