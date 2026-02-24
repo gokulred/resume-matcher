@@ -1,8 +1,9 @@
-# app.py
+
 import streamlit as st
 import requests
+import os
 
-API_URL = "http://localhost:8000/match-pdf"
+API_URL = os.getenv("API_URL", "http://localhost:8000/match-pdf")
 
 st.set_page_config(page_title="Resume Matcher", layout="wide")
 st.title("Intelligent Resume Matcher")
