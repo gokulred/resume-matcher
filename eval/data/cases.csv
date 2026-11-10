@@ -1,0 +1,19 @@
+resume,jd,expected_score,expected_recommendation,notes
+priya_backend,backend_python,90,Hire,clear match: every requirement plus both nice-to-haves
+priya_backend,frontend_react,15,No Hire,clear mismatch: no frontend experience
+priya_backend,ml_engineer,30,No Hire,strong Python but no ML or NLP
+arjun_ml,ml_engineer,92,Hire,clear match including RAG and Kubernetes
+arjun_ml,backend_python,45,Review,Python and Docker but no FastAPI/Django or Postgres depth
+arjun_ml,data_analyst,40,Review,overqualified technically but no BI tools
+lena_frontend,frontend_react,93,Hire,clear match: every requirement plus Next.js and Storybook
+lena_frontend,backend_python,10,No Hire,clear mismatch
+maria_analyst,data_analyst,90,Hire,clear match including logistics domain
+maria_analyst,ml_engineer,10,No Hire,clear mismatch
+sam_bootcamp,frontend_react,35,Review,borderline: basic React only and no TypeScript or professional experience
+sam_bootcamp,backend_python,15,No Hire,basic Python only
+tom_devops,backend_python,55,Interview,borderline: strong Docker/AWS/Postgres but Python is scripting only
+tom_devops,ml_engineer,30,No Hire,infrastructure overlap only
+wei_datascience,ml_engineer,55,Interview,borderline: ML and evaluation strong but little NLP and no production serving
+wei_datascience,data_analyst,70,Interview,strong SQL/stats/Python but no Tableau or Power BI
+hannah_nurse,data_analyst,5,No Hire,career changer with no relevant skills
+hannah_nurse,frontend_react,0,No Hire,no relevant skills

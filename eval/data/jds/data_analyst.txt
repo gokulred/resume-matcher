@@ -1,0 +1,15 @@
+Data Analyst
+
+Our operations team needs an analyst to turn data into decisions.
+
+Requirements:
+- 2+ years in a data analyst role
+- Advanced SQL
+- Dashboarding in Tableau or Power BI
+- Advanced Excel (pivot tables, lookups)
+- Communicating findings to non-technical stakeholders
+- Basic statistics (A/B tests, significance)
+
+Nice to have:
+- Python or R for analysis
+- Experience in logistics or supply chain

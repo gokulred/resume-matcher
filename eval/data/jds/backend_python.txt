@@ -1,0 +1,16 @@
+Senior Backend Engineer (Python)
+
+We are hiring a senior backend engineer to build and scale our payments API.
+
+Requirements:
+- 5+ years of professional Python experience
+- Production experience with FastAPI or Django
+- Strong SQL and PostgreSQL skills, including query optimisation
+- Docker and container-based deployments
+- Experience with AWS (ECS, RDS, S3)
+- Writing automated tests with pytest
+- Designing REST APIs
+
+Nice to have:
+- Redis, Celery or other task queues
+- Experience in fintech or payments

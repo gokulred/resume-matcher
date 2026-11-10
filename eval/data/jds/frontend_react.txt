@@ -1,0 +1,15 @@
+Frontend Engineer (React)
+
+We are looking for a frontend engineer to own our customer dashboard.
+
+Requirements:
+- 3+ years with React and TypeScript
+- State management (Redux, Zustand or React Query)
+- Strong HTML, CSS and accessibility (WCAG) knowledge
+- Testing with Jest and React Testing Library
+- Working with REST or GraphQL APIs
+- Performance optimisation of web applications
+
+Nice to have:
+- Next.js
+- Design systems and Storybook

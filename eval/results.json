@@ -1,0 +1,886 @@
+{
+ "runs": 3,
+ "configs": [
+  "rag:v1",
+  "full:v1",
+  "rag:v2"
+ ],
+ "setup": "LLM `llama3`, embeddings `nomic-embed-text`, 300-char chunks, rag keeps 50% of chunks",
+ "rows": {
+  "rag:v1": [
+   {
+    "resume": "priya_backend",
+    "jd": "backend_python",
+    "context_chars": 949,
+    "scores": [
+     85,
+     90,
+     90
+    ],
+    "recommendations": [
+     "Hire",
+     "Hire",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "priya_backend",
+    "jd": "frontend_react",
+    "context_chars": 881,
+    "scores": [
+     40,
+     20,
+     20
+    ],
+    "recommendations": [
+     "Interview",
+     "Review",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "priya_backend",
+    "jd": "ml_engineer",
+    "context_chars": 992,
+    "scores": [
+     80,
+     60,
+     80
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "arjun_ml",
+    "jd": "ml_engineer",
+    "context_chars": 1030,
+    "scores": [
+     90,
+     85,
+     90
+    ],
+    "recommendations": [
+     "Hire",
+     "Hire",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "arjun_ml",
+    "jd": "backend_python",
+    "context_chars": 1030,
+    "scores": [
+     60,
+     60,
+     80
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "arjun_ml",
+    "jd": "data_analyst",
+    "context_chars": 1063,
+    "scores": [
+     60,
+     70,
+     40
+    ],
+    "recommendations": [
+     "Interview",
+     "Review",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "lena_frontend",
+    "jd": "frontend_react",
+    "context_chars": 953,
+    "scores": [
+     80,
+     80,
+     85
+    ],
+    "recommendations": [
+     "Interview",
+     "Hire",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "lena_frontend",
+    "jd": "backend_python",
+    "context_chars": 1010,
+    "scores": [
+     20,
+     40,
+     30
+    ],
+    "recommendations": [
+     "No Hire",
+     "Review",
+     "No Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "maria_analyst",
+    "jd": "data_analyst",
+    "context_chars": 1035,
+    "scores": [
+     85,
+     90,
+     92
+    ],
+    "recommendations": [
+     "Hire",
+     "Hire",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "maria_analyst",
+    "jd": "ml_engineer",
+    "context_chars": 1035,
+    "scores": [
+     60,
+     40,
+     40
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "sam_bootcamp",
+    "jd": "frontend_react",
+    "context_chars": 1018,
+    "scores": [
+     40,
+     60,
+     60
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "sam_bootcamp",
+    "jd": "backend_python",
+    "context_chars": 1018,
+    "scores": [
+     20,
+     20,
+     20
+    ],
+    "recommendations": [
+     "Review",
+     "No Hire",
+     "No Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "tom_devops",
+    "jd": "backend_python",
+    "context_chars": 1073,
+    "scores": [
+     70,
+     80,
+     85
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "tom_devops",
+    "jd": "ml_engineer",
+    "context_chars": 1073,
+    "scores": [
+     20,
+     50,
+     60
+    ],
+    "recommendations": [
+     "No Hire",
+     "Review",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "wei_datascience",
+    "jd": "ml_engineer",
+    "context_chars": 1012,
+    "scores": [
+     80,
+     80,
+     80
+    ],
+    "recommendations": [
+     "Hire",
+     "Interview",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "wei_datascience",
+    "jd": "data_analyst",
+    "context_chars": 1035,
+    "scores": [
+     85,
+     80,
+     80
+    ],
+    "recommendations": [
+     "Interview",
+     "Hire",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "hannah_nurse",
+    "jd": "data_analyst",
+    "context_chars": 621,
+    "scores": [
+     20,
+     20,
+     0
+    ],
+    "recommendations": [
+     "No Hire",
+     "No Hire",
+     "No Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "hannah_nurse",
+    "jd": "frontend_react",
+    "context_chars": 606,
+    "scores": [
+     20,
+     20,
+     0
+    ],
+    "recommendations": [
+     "No Hire",
+     "No Hire",
+     "No Hire"
+    ],
+    "failures": 0
+   }
+  ],
+  "full:v1": [
+   {
+    "resume": "priya_backend",
+    "jd": "backend_python",
+    "context_chars": 1860,
+    "scores": [
+     85,
+     90,
+     85
+    ],
+    "recommendations": [
+     "Hire",
+     "Hire",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "priya_backend",
+    "jd": "frontend_react",
+    "context_chars": 1860,
+    "scores": [
+     20,
+     20,
+     40
+    ],
+    "recommendations": [
+     "Review",
+     "No Hire",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "priya_backend",
+    "jd": "ml_engineer",
+    "context_chars": 1860,
+    "scores": [
+     60,
+     80,
+     70
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "arjun_ml",
+    "jd": "ml_engineer",
+    "context_chars": 1763,
+    "scores": [
+     90,
+     85,
+     90
+    ],
+    "recommendations": [
+     "Hire",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "arjun_ml",
+    "jd": "backend_python",
+    "context_chars": 1763,
+    "scores": [
+     70,
+     80,
+     80
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "arjun_ml",
+    "jd": "data_analyst",
+    "context_chars": 1763,
+    "scores": [
+     60,
+     60,
+     60
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "lena_frontend",
+    "jd": "frontend_react",
+    "context_chars": 1647,
+    "scores": [
+     90,
+     85,
+     80
+    ],
+    "recommendations": [
+     "Hire",
+     "Hire",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "lena_frontend",
+    "jd": "backend_python",
+    "context_chars": 1647,
+    "scores": [
+     20,
+     20,
+     25
+    ],
+    "recommendations": [
+     "No Hire",
+     "No Hire",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "maria_analyst",
+    "jd": "data_analyst",
+    "context_chars": 1579,
+    "scores": [
+     80,
+     80,
+     85
+    ],
+    "recommendations": [
+     "Hire",
+     "Hire",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "maria_analyst",
+    "jd": "ml_engineer",
+    "context_chars": 1579,
+    "scores": [
+     40,
+     65,
+     60
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "sam_bootcamp",
+    "jd": "frontend_react",
+    "context_chars": 1439,
+    "scores": [
+     60,
+     60,
+     60
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "sam_bootcamp",
+    "jd": "backend_python",
+    "context_chars": 1439,
+    "scores": [
+     20,
+     30,
+     15
+    ],
+    "recommendations": [
+     "No Hire",
+     "No Hire",
+     "No Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "tom_devops",
+    "jd": "backend_python",
+    "context_chars": 1532,
+    "scores": [
+     85,
+     85,
+     85
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "tom_devops",
+    "jd": "ml_engineer",
+    "context_chars": 1532,
+    "scores": [
+     40,
+     60,
+     30
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "wei_datascience",
+    "jd": "ml_engineer",
+    "context_chars": 1446,
+    "scores": [
+     85,
+     70,
+     80
+    ],
+    "recommendations": [
+     "Interview",
+     "Hire",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "wei_datascience",
+    "jd": "data_analyst",
+    "context_chars": 1446,
+    "scores": [
+     80,
+     80,
+     75
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "hannah_nurse",
+    "jd": "data_analyst",
+    "context_chars": 1291,
+    "scores": [
+     20,
+     20,
+     20
+    ],
+    "recommendations": [
+     "Review",
+     "No Hire",
+     "No Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "hannah_nurse",
+    "jd": "frontend_react",
+    "context_chars": 1291,
+    "scores": [
+     20,
+     15,
+     10
+    ],
+    "recommendations": [
+     "No Hire",
+     "No Hire",
+     "No Hire"
+    ],
+    "failures": 0
+   }
+  ],
+  "rag:v2": [
+   {
+    "resume": "priya_backend",
+    "jd": "backend_python",
+    "context_chars": 949,
+    "scores": [
+     95,
+     90,
+     90
+    ],
+    "recommendations": [
+     "Hire",
+     "Interview",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "priya_backend",
+    "jd": "frontend_react",
+    "context_chars": 881,
+    "scores": [
+     20,
+     40,
+     35
+    ],
+    "recommendations": [
+     "No Hire",
+     "Review",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "priya_backend",
+    "jd": "ml_engineer",
+    "context_chars": 992,
+    "scores": [
+     65,
+     65,
+     61
+    ],
+    "recommendations": [
+     "Review",
+     "Review",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "arjun_ml",
+    "jd": "ml_engineer",
+    "context_chars": 1030,
+    "scores": [
+     90,
+     90,
+     85
+    ],
+    "recommendations": [
+     "Interview",
+     "Hire",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "arjun_ml",
+    "jd": "backend_python",
+    "context_chars": 1030,
+    "scores": [
+     67,
+     35,
+     64
+    ],
+    "recommendations": [
+     "Review",
+     "Review",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "arjun_ml",
+    "jd": "data_analyst",
+    "context_chars": 1063,
+    "scores": [
+     40,
+     42,
+     0
+    ],
+    "recommendations": [
+     "Review",
+     "Review",
+     "No Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "lena_frontend",
+    "jd": "frontend_react",
+    "context_chars": 953,
+    "scores": [
+     85,
+     85,
+     93
+    ],
+    "recommendations": [
+     "Hire",
+     "Hire",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "lena_frontend",
+    "jd": "backend_python",
+    "context_chars": 1010,
+    "scores": [
+     0,
+     10,
+     0
+    ],
+    "recommendations": [
+     "No Hire",
+     "No Hire",
+     "No Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "maria_analyst",
+    "jd": "data_analyst",
+    "context_chars": 1035,
+    "scores": [
+     95,
+     92,
+     95
+    ],
+    "recommendations": [
+     "Hire",
+     "Hire",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "maria_analyst",
+    "jd": "ml_engineer",
+    "context_chars": 1035,
+    "scores": [
+     35,
+     35,
+     35
+    ],
+    "recommendations": [
+     "Review",
+     "Review",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "sam_bootcamp",
+    "jd": "frontend_react",
+    "context_chars": 1018,
+    "scores": [
+     58,
+     63,
+     30
+    ],
+    "recommendations": [
+     "Review",
+     "Review",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "sam_bootcamp",
+    "jd": "backend_python",
+    "context_chars": 1018,
+    "scores": [
+     10,
+     12,
+     35
+    ],
+    "recommendations": [
+     "No Hire",
+     "No Hire",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "tom_devops",
+    "jd": "backend_python",
+    "context_chars": 1073,
+    "scores": [
+     85,
+     50,
+     64
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Review"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "tom_devops",
+    "jd": "ml_engineer",
+    "context_chars": 1073,
+    "scores": [
+     20,
+     35,
+     10
+    ],
+    "recommendations": [
+     "No Hire",
+     "Review",
+     "No Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "wei_datascience",
+    "jd": "ml_engineer",
+    "context_chars": 1012,
+    "scores": [
+     80,
+     65,
+     85
+    ],
+    "recommendations": [
+     "Interview",
+     "Review",
+     "Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "wei_datascience",
+    "jd": "data_analyst",
+    "context_chars": 1035,
+    "scores": [
+     85,
+     85,
+     83
+    ],
+    "recommendations": [
+     "Interview",
+     "Interview",
+     "Interview"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "hannah_nurse",
+    "jd": "data_analyst",
+    "context_chars": 621,
+    "scores": [
+     0,
+     10,
+     0
+    ],
+    "recommendations": [
+     "No Hire",
+     "No Hire",
+     "No Hire"
+    ],
+    "failures": 0
+   },
+   {
+    "resume": "hannah_nurse",
+    "jd": "frontend_react",
+    "context_chars": 606,
+    "scores": [
+     0,
+     0,
+     0
+    ],
+    "recommendations": [
+     "No Hire",
+     "No Hire",
+     "No Hire"
+    ],
+    "failures": 0
+   }
+  ]
+ },
+ "latency": {
+  "rag:v1": 34.737977905555724,
+  "full:v1": 32.5494882759263,
+  "rag:v2": 60.254793364814155
+ }
+}

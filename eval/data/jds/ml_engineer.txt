@@ -1,0 +1,15 @@
+Machine Learning Engineer (NLP)
+
+Join our applied ML team to ship NLP models that power search and recommendations.
+
+Requirements:
+- 3+ years building ML systems in Python
+- Deep learning with PyTorch
+- NLP experience: transformers, embeddings, fine-tuning
+- Deploying models to production (model serving, monitoring)
+- MLOps tooling such as MLflow, Docker, CI/CD
+- Solid understanding of evaluation metrics and experiment design
+
+Nice to have:
+- Vector databases and retrieval-augmented generation
+- Kubernetes
