@@ -1,0 +1,12 @@
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29,<1.0
+python-multipart>=0.0.9,<1.0
+python-dotenv>=1.0,<2.0
+ollama>=0.3,<1.0
+chromadb>=0.5,<1.0
+# chromadb 0.x calls posthog.capture() with the pre-6.0 signature; newer posthog logs an error on every operation
+posthog<6
+llama-parse>=0.4,<1.0
+pypdf>=4.0,<7.0
+nest_asyncio>=1.6,<2.0
+pydantic>=2.0,<3.0

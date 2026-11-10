@@ -1,0 +1,15 @@
+[tool.pytest.ini_options]
+pythonpath = ["backend", "eval"]
+testpaths = ["tests"]
+# chromadb 0.x uses a Pydantic API deprecated in 2.11; not ours to fix
+filterwarnings = ["ignore::DeprecationWarning:chromadb.*"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = [
+    "B008",  # FastAPI's File(...)/Form(...) defaults are the framework idiom
+    "E501",  # long prompt/Field strings read better unwrapped
+]

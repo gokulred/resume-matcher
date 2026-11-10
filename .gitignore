@@ -1,0 +1,11 @@
+.env
+__pycache__/
+.venv/
+.pytest_cache/
+.ruff_cache/
+eval/results-partial.md
+eval/results-partial.json
+# real resumes: personal data, never commit
+resumes/
+resumes-hard/
+eval/private/
