@@ -1,0 +1,60 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      # passed through only when set in your shell; otherwise the code's defaults apply
+      - CONTEXT_MODE
+      - PROMPT_VERSION
+      - LLM_MODEL
+      - EMBED_MODEL
+    healthcheck:
+      # the slim image has no curl; Python's stdlib is enough
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
+      start_period: 60s
+      start_interval: 2s  # quick checks while starting, so the frontend isn't kept waiting
+      interval: 30s
+      retries: 3
+    depends_on:
+      ollama-pull:
+        condition: service_completed_successfully
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://backend:8000/match-pdf
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  ollama:
+    image: ollama/ollama:0.40.11
+    # no host port: the backend reaches it on the compose network, and a host Ollama may already own 11434
+    volumes:
+      - ollama_storage:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      retries: 20
+
+  # One-shot: downloads the configured models on first run (no-op once they're in the volume).
+  # The fallbacks must match the defaults of LLM_MODEL in ai_logic.py and EMBED_MODEL in vector_db.py.
+  ollama-pull:
+    image: ollama/ollama:0.40.11
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    entrypoint: ["sh", "-c", "ollama pull ${LLM_MODEL:-llama3} && ollama pull ${EMBED_MODEL:-nomic-embed-text}"]
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+volumes:
+  ollama_storage:

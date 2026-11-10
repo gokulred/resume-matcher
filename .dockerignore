@@ -1,0 +1,6 @@
+# allowlist: the images only need the requirements files and the app source
+*
+!requirements-backend.txt
+!requirements-frontend.txt
+!backend/*.py
+!frontend/*.py

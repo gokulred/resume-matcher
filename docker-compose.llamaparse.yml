@@ -1,0 +1,7 @@
+# Opt-in: parse PDFs with LlamaParse, which sends them to LlamaCloud. Without this file the key never
+# reaches the container. Usage: docker compose -f docker-compose.yml -f docker-compose.llamaparse.yml up
+services:
+  backend:
+    environment:
+      - PDF_PARSER=llamaparse
+      - LLAMA_CLOUD_API_KEY
