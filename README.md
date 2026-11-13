@@ -6,8 +6,7 @@ The interesting part isn't the app, it's the [**evaluation**](#evaluation): I la
 
 **Result:** on 18 synthetic pairs, a scoring rubric in the prompt halved the model's over-scoring (+13.9 → +6.6) and raised recommendation accuracy from 54% to 70%. Then I [tested it on 98 real resume/job pairs](#real-resumes), and the synthetic eval turned out to be far too easy: the model over-scores real candidates by about 43 points and ranks them only loosely (correlation 0.47). A third prompt that scores from a requirement checklist cut that over-scoring in half (+20.4) and raised recommendation accuracy from 36% to 49%, but missed my adoption rule on correlation by 0.02, so it's an option, not the default yet. The app isn't reliable on real resumes yet.
 
-<!-- ![demo](docs/demo.gif) -->
-
+![Resume Matcher scoring a fictional resume against a backend job, then a mismatch](docs/demo.gif)
 
 ## How it works
 
